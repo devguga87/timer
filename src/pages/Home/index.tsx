@@ -8,10 +8,14 @@ const Home = () => {
       <form>
         <Styled.FormContainer>
           <label htmlFor="task">Vou trabalhar em</label>
-          <input type="text" id="task"></input>
+          <Styled.TaskInput
+            type="text"
+            id="task"
+            placeholder="Dê um nome para o seu projeto"
+          ></Styled.TaskInput>
 
           <label htmlFor="minutesAmount">durante</label>
-          <input id="minutesAmount" type="number" />
+          <Styled.MinutesAmountInput id="minutesAmount" type="number" />
 
           <span>minutos.</span>
         </Styled.FormContainer>
@@ -24,10 +28,10 @@ const Home = () => {
           <span>0</span>
         </Styled.CountdownContainer>
 
-        <button type="submit">
+        <Styled.StartCountdownButton disabled type="submit">
           <Play size={24} />
           Começar
-        </button>
+        </Styled.StartCountdownButton>
       </form>
     </Styled.HomeContainer>
   )
