@@ -12,10 +12,25 @@ const Home = () => {
             type="text"
             id="task"
             placeholder="Dê um nome para o seu projeto"
-          ></Styled.TaskInput>
+            list="task-suggestions"
+          />
+
+          <datalist id="task-suggestions">
+            <option value="projeto 1" />
+            <option value="projeto 2" />
+            <option value="projeto 3" />
+            <option value="projeto 4" />
+          </datalist>
 
           <label htmlFor="minutesAmount">durante</label>
-          <Styled.MinutesAmountInput id="minutesAmount" type="number" />
+          <Styled.MinutesAmountInput
+            id="minutesAmount"
+            type="number"
+            placeholder="00"
+            step={5}
+            min={5}
+            max={60}
+          />
 
           <span>minutos.</span>
         </Styled.FormContainer>
